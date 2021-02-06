@@ -28,8 +28,7 @@ func Main() {
 	checkSupportArch()
 
 	if len(os.Args) > 1 {
-		// Tip 根据第一个参数设置对应的启动方式,可以看到除默认的启动方式外，特殊的是gateway和grpc-proxy
-		// gateway是四层代理，grpc-proxy是七层代理
+		// Tip 根据第一个参数设置对应的启动方式,可以看到除默认的启动方式外，特殊的是gateway和grpc-proxy gateway是四层代理，grpc-proxy是七层代理
 		cmd := os.Args[1]
 		if covArgs := os.Getenv("ETCDCOV_ARGS"); len(covArgs) > 0 {
 			args := strings.Split(os.Getenv("ETCDCOV_ARGS"), "\xe7\xcd")[1:]
